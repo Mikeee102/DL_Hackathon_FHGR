@@ -1,0 +1,12 @@
+# PyTorch: Version nicht gepinnt — GPU-Wheels lokal installieren:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+torch
+torchvision
+numpy>=1.26
+pandas>=2.1
+pillow>=10.2
+pyyaml>=6.0
+scikit-learn>=1.4
+matplotlib>=3.8
+tqdm>=4.66
+imagehash>=4.3

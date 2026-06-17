@@ -1,0 +1,26 @@
+run_name: baseline_cnn
+seed: 42
+data:
+  train_csv: data/splits/train.csv
+  val_csv: data/splits/val.csv
+  test_csv: data/splits/test.csv
+  image_root: null
+  image_size: 224
+model:
+  name: baseline
+  dropout: 0.3
+training:
+  run_dir: reports/runs
+  epochs: 20
+  batch_size: 64
+  num_workers: 4
+  amp: true
+  lr_head: 0.001
+  lr_backbone: 0.001
+  weight_decay: 0.0001
+  loss: bce
+  sampler: weighted
+  sampler_pos_ratio: 0.3
+  sampler_num_samples: null
+  early_stop_patience: 5
+  head_only_epochs: 0

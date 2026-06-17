@@ -1,0 +1,6 @@
+{
+  "sample_size": 500,
+  "distinct_sizes": {
+    "224x224": 500
+  }
+}

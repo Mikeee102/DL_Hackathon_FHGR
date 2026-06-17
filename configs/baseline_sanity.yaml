@@ -1,0 +1,32 @@
+run_name: baseline_sanity
+seed: 42
+
+data:
+  train_csv: data/splits/train_tiny.csv
+  val_csv: data/splits/val_tiny.csv
+  test_csv: data/splits/test.csv
+  image_root: null
+  image_size: 224
+
+model:
+  name: baseline
+  dropout: 0.3
+
+training:
+  run_dir: reports/runs
+  epochs: 5
+  batch_size: 32
+  num_workers: 0             # in-process, kein IPC overhead fuer kleines Sample
+  amp: false
+
+  lr_head: 0.001
+  lr_backbone: 0.001
+  weight_decay: 0.0001
+
+  loss: bce
+  sampler: weighted
+  sampler_pos_ratio: 0.3
+  sampler_num_samples: null
+
+  early_stop_patience: 10
+  head_only_epochs: 0
